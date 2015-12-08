@@ -1,5 +1,5 @@
 import React from 'react/addons';
-import Contract from '../../src/components/Contract/Contract';
+import {Contract} from '../../src/components/Contract/Contract';
 import {expect} from 'chai';
 
 const {renderIntoDocument, scryRenderedDOMComponentsWithTag} = React.addons.TestUtils;
