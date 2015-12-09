@@ -2,6 +2,8 @@ import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
 import {Contract} from './Contract';
+import AddContract from './AddContract';
+import * as actionCreators from '../../action_creators';
 
 
 export const ContractList = React.createClass({
@@ -11,6 +13,8 @@ export const ContractList = React.createClass({
   },
   render: function() {
     return <div className="contracts">
+
+        <AddContract {...this.props}/>
 
         {this.getContracts().map(entry => 
             <Contract key={entry.id} contract={entry}/>
@@ -30,4 +34,4 @@ function mapStateToProps(state) {
   };
 }
 
-export const ContractListContainer = connect(mapStateToProps)(ContractList);
+export const ContractListContainer = connect(mapStateToProps,actionCreators)(ContractList);

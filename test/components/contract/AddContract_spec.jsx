@@ -15,7 +15,7 @@ describe('AddContract', () => {
     const textInputs = scryRenderedDOMComponentsWithTag(component, 'input');
     const buttons = scryRenderedDOMComponentsWithTag(component, 'button');
 
-    expect(textInputs.length).to.equal(1);
+    expect(textInputs.length).to.equal(2);
     expect(buttons.length).to.equal(1);
 
   });
